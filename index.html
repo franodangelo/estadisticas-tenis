@@ -11,6 +11,9 @@
   /* Layout: app de una pantalla con navegación por pestañas; marcador fijo arriba, carga de puntos y análisis debajo */
   /* Tipografías del sistema: sin dependencias externas, funciona sin internet y en cualquier red (antes se cargaban de Google Fonts, lo que podía bloquear el render si la red/un bloqueador cortaba ese pedido) */
 
+  /* El atributo hidden debe ocultar de verdad: sin esto, reglas como .editor-overlay { display:flex } ganaban sobre [hidden] y dejaban una capa invisible tapando toda la pantalla, bloqueando los clics */
+  [hidden] { display: none !important; }
+
   :root {
     --bg: #eef1ef;
     --surface: #ffffff;
