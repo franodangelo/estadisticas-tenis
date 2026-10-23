@@ -9,7 +9,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
   /* Layout: app de una pantalla con navegación por pestañas; marcador fijo arriba, carga de puntos y análisis debajo */
-  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+  /* Tipografías del sistema: sin dependencias externas, funciona sin internet y en cualquier red (antes se cargaban de Google Fonts, lo que podía bloquear el render si la red/un bloqueador cortaba ese pedido) */
 
   :root {
     --bg: #eef1ef;
@@ -29,8 +29,8 @@
     --shadow: 0 1px 2px rgba(20,32,27,.06), 0 6px 20px rgba(20,32,27,.06);
     --mom-up: color-mix(in srgb, var(--accent) 24%, transparent);
     --mom-dn: color-mix(in srgb, var(--muted) 28%, transparent);
-    --display: 'Archivo', system-ui, sans-serif;
-    --body: 'IBM Plex Sans', system-ui, sans-serif;
+    --display: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --body: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
